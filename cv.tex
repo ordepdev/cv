@@ -1,0 +1,102 @@
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document} 
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Pedro Tavares}\\
+pedrotavares.dev@gmail.com & linkedin.com/in/ordepdev\\
+ordepdev.me & github.com/ordepdev\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Work Experience}
+\begin{itemize}
+	\item
+		\ressubheading{Unicer}{Porto, Portugal}{Lead Umbraco Developer}{January 2014 - Present}
+		\begin{itemize}
+			\resitem{Part of a team resposible for building modules and launching websites based on the Carlsberg Pegasus project.}
+			\resitem{Launched three core websites: Super Bock, \'Agua das Pedras and Carslberg Where is the Party.}
+			\resitem{Resposibilities include specification, design, development and testing of the Unicer core modules, as well as release engineering and mentoring of other team members.}
+			\resitem{Contributed in several ways to Umbraco as a Service.}
+		\end{itemize}
+		
+	\item
+		\ressubheading{ORBCOM}{Porto, Portugal}{Software Engineer}{November 2013 - Present}
+		\begin{itemize}
+			\resitem{Responsible for the ASP.NET MVC and Umbraco development as well as mentoring interns on both technologies.}
+			\resitem{Supported a remote project, currently stable, with patches and several improvements.}
+			\resitem{Built websites using Umbraco, JavaScript and SASS for several clients.}
+			\resitem{Continue to develop and maintain Sudo and make regular releases.}
+		\end{itemize}
+		
+	\item
+		\ressubheading{ORBCOM}{Porto, Portugal}{Intern Software Engineer}{February 2013 - October 2013}
+		\begin{itemize}
+			\resitem{Part of a team responsible for design and development of both backoffice and a turism mobile app.}
+			\resitem{As a consultant I was responsible for specification, design, development and testing of an industrial application with several requests per second, as well as integration and reports.}
+		\end{itemize}
+	
+	\item
+		\ressubheading{Imaginasoft HS}{Porto, Portugal}{Intern Software Engineer}{February 2012 - July 2012}
+		\begin{itemize}
+			\resitem{Part of a team responsible for development and testing of a healthcare solution.}
+		\end{itemize}
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
+	\item
+	\ressubheading{Polytechnic Institute Of Cávado And Ave}{Barcelos, Portugal}{Licentiate in Health Informatics}{2009 - 2012}
+	\begin{itemize}
+		\resitem{Internship at Imaginasoft HS}
+	\end{itemize}
+	
+\end{itemize}
+
+%\pagebreak
+
+\resheading{Skills}
+
+\begin{description}
+\item[Technologies:]
+C{}\verb!#!, JavaScript, Java, Python, Ruby, SASS, Node, MVC Frameworks (ASP.NET MVC, Ruby on Rails), Umbraco, GIT, REST
+\item[Miscellaneous:]
+fast pace learner, self-driven, unit testing, design patterns, databases, troubleshooting and debugging, problem solving
+\end{description}	
+
+\resheading{Activities}
+
+\begin{description}
+\item[Attended at Sapo Codebits VI and VII.]
+\end{description}
+
+\end{document}
