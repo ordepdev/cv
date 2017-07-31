@@ -8,8 +8,6 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
-% Adjust margins to 0.5in on all sides
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
@@ -17,7 +15,6 @@
 \addtolength{\textheight}{1.0in}
 
 %-----------------------------------------------------------
-%Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
@@ -26,7 +23,6 @@
 		\textit{#3} & \textit{#4} \\
 	\end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
-
 
 \begin{document} 
 	
@@ -43,14 +39,13 @@
 	\begin{itemize}
 
 		\item
-		\ressubheading{Jumia Services}{Porto, Portugal}{Web Engineer}{May 2016 - Present}
+		\ressubheading{Jumia Services}{Porto, Portugal}{Software Developer}{May 2016 - Present}
 		\begin{itemize}
 			\resitem{Designed, developed and tested highly concurrent and multi-timezone microservices using mainly Java, Spring Boot and Netflix OSS.}
-			\resitem{Handled several concurrency issues in our Mongo databases that dropped our error rate to nearly 0\%.}
+			\resitem{Handled several concurrency issues in our data-intensive applications that dropped the error rate to nearly 0\%.}
 			\resitem{Defined a new strategy to release multiple modules that performed 10 times faster than the previous one.}
 			\resitem{Designed and develop an end-to-end testing framework that dropped by almost 100\% the time needed to test a full new feature.}
 			\resitem{Massively increased the testing coverage of our microservices through unit, integration, contract and end-to-end testing.}
-			\resitem{Gained a significant know-how about the warehousing industry.}
 		\end{itemize}
 	
 		\vspace{0.05in}
@@ -98,15 +93,13 @@
 	\resheading{Skills}
 	
 	\begin{description}
-		\item[Languages:]
-		Java, JavaScript and C{}\verb!#!
-		\item[Interests:]
-		automated workflows, microservices, performance and scalability, test driven development, design patterns, functional programming and databases
-	\end{description}	
+		\item\centering{\textit{automated workflows, microservices, event streaming, concurrency, test driven development, design patterns, object-oriented programming and high-performance persistence}}
+	\end{description}
 	
 	\resheading{Activities}
 	
 	\begin{description}
+		\item[Speaker at local meetups]
 		\item[Attended at Sapo Codebits VI, VII and Devoxx Poland 2017]
 	\end{description}
 	
