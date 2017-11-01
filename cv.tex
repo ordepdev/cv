@@ -1,106 +1,121 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
-%-----------------------------------------------------------
+\usepackage{latexsym}
 \usepackage[empty]{fullpage}
-\usepackage{color}
-\usepackage{hyperref}
-\definecolor{mygrey}{gray}{0.80}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.375in}
+%\addtolength{\evensidemargin}{-0.375in}
+%\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
 
-%-----------------------------------------------------------
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
-\newcommand{\ressubheading}[4]{
-	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-	\end{tabular*}\vspace{-6pt}}
-%-----------------------------------------------------------
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\begin{document} 
-	
-	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{\large Pedro Tavares}\\
-		pedrotavares.dev@gmail.com & \hyperref[http://ordepdev.me]{http://ordepdev.me}\\
-		& http://github.com/ordepdev\\
-	\end{tabular*}
-	\\
-	
-	\vspace{0.4in}
-	
-	\resheading{Work Experience}
-	\begin{itemize}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
 
-		\item
-		\ressubheading{Jumia Services}{Porto, Portugal}{Software Developer}{May 2016 - Present}
-		\begin{itemize}
-			\resitem{Designed, developed and tested highly concurrent and multi-timezone microservices using mainly Java, Spring Boot and Netflix OSS.}
-			\resitem{Handled several concurrency issues in our data-intensive applications that dropped the error rate to nearly 0\%.}
-			\resitem{Defined a new strategy to release multiple modules that performed 10 times faster than the previous one.}
-			\resitem{Designed and develop an end-to-end testing framework that dropped by almost 100\% the time needed to test a full new feature.}
-			\resitem{Massively increased the testing coverage of our microservices through unit, integration, contract and end-to-end testing.}
-		\end{itemize}
-	
-		\vspace{0.05in}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
-		\item
-		\ressubheading{ORBCOM}{Porto, Portugal}{Software Developer}{November 2013 - April 2016}
-		\begin{itemize}
-			\resitem{Responsible for the ASP.NET MVC and Umbraco development as well as mentoring interns on both technologies with several in-house hands-on.}
-			\resitem{Responsible for the development of e-commerce solutions using Umbraco and Merchello. }
-		\end{itemize}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-		\vspace{0.05in}
-		
-		\item
-		\ressubheading{Unicer}{Porto, Portugal}{Lead Umbraco Developer}{January 2015 - December 2015}
-		\begin{itemize}
-			\resitem{Part of a team responsible for building modules and launching websites based on the Carlsberg Pegasus project.}
-			\resitem{Launched three core websites: Super Bock, \'Agua das Pedras and Carslberg Where is the Party.}
-			\resitem{Responsibilities include specification, design, development and testing of the Unicer core modules, as well as release engineering and mentoring of other team members.}
-			\resitem{Contributed in several ways to Umbraco as a Service.}
-		\end{itemize}
+\renewcommand{\labelitemii}{$\circ$}
 
-		\vspace{0.05in}
-		
-		\item
-		\ressubheading{ORBCOM}{Porto, Portugal}{Intern Software Developer}{February 2013 - October 2013}
-		\begin{itemize}
-			\resitem{Part of a team responsible for the specification, design, development and testing of an hybrid mobile app.}
-		\end{itemize}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-	\end{itemize}
+\begin{document}
 
-\resheading{Education}
-	\begin{itemize}
-		\item
-		\ressubheading{Polytechnic Institute Of C\'avado And Ave}{Barcelos, Portugal}{Licentiate in Health Informatics}{2009 - 2012}
-		\begin{itemize}
-			\resitem{Internship at Imaginasoft HS}
-		\end{itemize}
-		
-	\end{itemize}
-	
-	%\pagebreak
-	
-	\resheading{Skills}
-	
-	\begin{description}
-		\item\centering{\textit{automated workflows, microservices, event streaming, concurrency, test driven development, design patterns, object-oriented programming and high-performance persistence}}
-	\end{description}
-	
-	\resheading{Activities}
-	
-	\begin{description}
-		\item[Speaker at local meetups]
-		\item[Attended at Sapo Codebits VI, VII and Devoxx Poland 2017]
-	\end{description}
-	
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://ordepdev.me}{\Large Pedro Tavares}} & Email: \href{mailto:pedrotavares.dev@gmail.com}{pedrotavares.dev@gmail.com}\\
+  \href{http://ordepdev.me}{http://ordepdev.me} & Mobile: 932835322 \\
+\end{tabular*}
+
+\section{Interests}
+  \centering{\textit{automated workflows, microservices, event streaming, concurrency, test driven development, design patterns, object-oriented programming and high-performance persistence}}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Faculty of Engineering of the University of Porto}{Porto, Portugal}
+      {Masters in Software Engineering}{2017 - Present}
+    \resumeSubheading
+      {Polytechnic Institute Of C\'avado And Ave}{Barcelos, Portugal}
+      {Bachelor in Health Informatics}{2009 - 2012}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Jumia Services}{Porto, Portugal}
+      {Software Engineer}{May 2016 - Nov 2017}
+      \resumeItemListStart
+        \resumeItem{}{Designed, developed and tested highly concurrent and multi-timezone microservices using mainly Java, Spring Boot and Netflix OSS.}
+        \resumeItem{}{Handled several concurrency issues in our data-intensive applications that dropped the error rate to nearly 0\%.}
+        \resumeItem{}{Defined a new strategy to release multiple modules that performed 10 times faster than the previous one.}
+        \resumeItem{}{Designed and develop an end-to-end testing framework that dropped by almost 100\% the time needed to test a full new feature.}
+        \resumeItem{}{Massively increased the testing coverage of our microservices through unit, integration, contract and end-to-end testing.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+     {ORBCOM}{Porto, Portugal}
+     {Software Engineer}{November 2013 - April 2016}
+      \resumeItemListStart
+        \resumeItem{}{Responsible for the ASP.NET MVC and Umbraco development as well as mentoring interns on both technologies with several in-house hands-on.}
+        \resumeItem{}{Responsible for the development of e-commerce solutions using Umbraco and Merchello.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Unicer}{Porto, Portugal}
+      {Software Engineer}{January 2015 - December 2015}
+      \resumeItemListStart
+        \resumeItem{}{Responsible for building modules, mentoring team members, and releasing websites based on the Carlsberg Pegasus project: Super Bock, \'Agua das Pedras and Carslberg Where is the Party.}        
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+\section{Activities}
+	\resumeItemListStart
+	    \resumeItem{}{Organized Hacktoberfest in Porto! 2017 Edition}
+	    \resumeItem{}{Speaker at Pixels Camp 2017 with a talk on Consumer-Driven Contracts}\resumeItem{}{Speaker at local meetups such as Porto Codes and Devops Porto}
+        \resumeItem{}{Attended at Sapo Codebits VI, VII and Devoxx Poland 2017}   
+      \resumeItemListEnd
+
 \end{document}
