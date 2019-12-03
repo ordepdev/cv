@@ -1,4 +1,4 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -18,8 +18,8 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-%\addtolength{\oddsidemargin}{-0.375in}
-%\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\evensidemargin}{-0.45in}
 %\addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -63,59 +63,103 @@
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://ordepdev.me}{\Large Pedro Tavares}} & Email: \href{mailto:pedrotavares.dev@gmail.com}{pedrotavares.dev@gmail.com}\\
-  \href{http://ordepdev.me}{http://ordepdev.me} & Mobile: 932835322 \\
+  \textbf{\href{http://ordepdev.me}{\Large Pedro Tavares}} & \href{mailto:pedrotavares.dev@gmail.com}{pedrotavares.dev@gmail.com}\\
+  \href{http://ordepdev.me}{ordepdev.me} & +351932835322 \\
 \end{tabular*}
 
 \section{Interests}
-  \centering{\textit{automated workflows, microservices, event streaming, concurrency, test driven development, design patterns, object-oriented programming and high-performance persistence}}
+  \centering{\textit{distributed systems, data-intensive applications, functional programming}} \\
+ 
+\section{Relevant Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Talkdesk}{Porto, Portugal}
+    {Software Engineer}{2018 - 2019}
+    \resumeItemListStart
+      \resumeItem{}{Teamed up with 2 highly skilled developers to ramp up a brand new data platform.}
+      \resumeItem{}{Designed and developed a high throughput bridge from our core messaging system, RabbitMQ,
+      to Apache Kafka to support all the required data processing, both in Elixir and Scala.}
+      \resumeItem{}{Developed a stream processing layer on top of Kafka, providing a set of user-friendly DSLs
+      to allow other teams apply their own business logic and deliver high quality read models to be queried by multiple systems afterwards.}
+      \resumeItem{}{Delivered a highly scalable streaming API, written in Elixir, to make the connection between our data platform
+      and real-time dashboards with multiple live subscribers. High quality standards were applied and we took care of problems like duplicates and backpressure.}
+      \resumeItem{}{Performed as On-Call Engineer for API-Gateway and Talkdesk ID, the two entry points of Talkdesk. Created and tuned a few metrics, and
+      wrote detailed and blameless post-mortems after the incidents, that were useful to make improvements in the affected systems.}
+      \resumeItem{}{Evaluated candidates challenges and performed technical interviews with direct impact in the team. I was also responsible for coaching
+      and mentoring newcomers in the team, by providing high value deep dive sessions around our core systems. Newcomers were ready to contribute after the
+      first week on the job with pair and mob programming sessions. }
+      \resumeItem{}{Started a weekly user group around computer science papers, mostly an in-house version of the Papers We Love meetup. It was great to see
+      more people reading papers after each session.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Farfetch}{Porto, Portugal}
+      {Software Engineer}{2017 - 2018}
+      \resumeItemListStart
+        \resumeItem{}{Worked closely with the architecture team to design and implement
+        a cross-company strategy to mask sensitive personal information backed by Apache Kafka and Cassandra.}
+        \resumeItem{}{Extracted and scaled a legacy application to thousands of users
+        through small endpoints that were exposed on a public API, designed with a CQRS architecture.}
+        \resumeItem{}{Increased the test depth and coverage of a core and highly-available service that
+        it is being used by the customer service department to perform direct sales.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Jumia Services}{Porto, Portugal}
+      {Software Engineer}{2016 - 2017}
+      \resumeItemListStart
+        \resumeItem{}{Designed, developed and tested highly concurrent and multi-timezone
+        microservices using mainly Java, Spring Boot and Netflix OSS.}
+        \resumeItem{}{Designed a solution to preserve the message processing ordering within
+        multiple RabbitMQ consumers to improve the consistency of our microservices.}
+        \resumeItem{}{Handled several concurrency issues in our data-intensive applications
+        that dropped the error rate to nearly 0\%.}
+        \resumeItem{}{Defined a new strategy to release multiple modules that performed 10
+        times faster than the previous one.}
+        \resumeItem{}{Designed and develop an end-to-end testing framework that dropped by
+        almost 100\% the time needed to test a full new feature.}
+        \resumeItem{}{Massively increased the testing coverage of our microservices through
+        unit, integration, contract and end-to-end testing.}
+      \resumeItemListEnd
+
+    %\resumeSubheading
+    %{Unicer}{Porto, Portugal}
+    %{Software Engineer}{2015}
+    %\resumeItemListStart
+    %  \resumeItem{}{Responsible for building modules, mentoring team members, and releasing
+    %  websites based on the Carlsberg Pegasus project: Super Bock, \'Agua das Pedras and
+    %  Carslberg Where is the Party.}
+    %\resumeItemListEnd
+
+    %\resumeSubheading
+    % {ORBCOM}{Porto, Portugal}
+    % {Software Engineer}{2013 - 2014}
+    %  \resumeItemListStart
+    %    \resumeItem{}{Responsible for the ASP.NET MVC and Umbraco development as well as
+    %    mentoring interns on both technologies with several in-house hands-on.}
+    %    \resumeItem{}{Responsible for the development of e-commerce solutions using
+    %    Umbraco and Merchello.}
+    %  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Faculty of Engineering of the University of Porto}{Porto, Portugal}
-      {Masters in Software Engineering}{2017 - Present}
+      {Faculty of Engineering of the University of Porto}{Portugal}
+      {Masters in Software Engineering}{2017 - (On hold)}
     \resumeSubheading
-      {Polytechnic Institute Of C\'avado And Ave}{Barcelos, Portugal}
+      {Polytechnic Institute Of C\'avado And Ave}{Portugal}
       {Bachelor in Health Informatics}{2009 - 2012}
   \resumeSubHeadingListEnd
-
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Jumia Services}{Porto, Portugal}
-      {Software Engineer}{May 2016 - Nov 2017}
-      \resumeItemListStart
-        \resumeItem{}{Designed, developed and tested highly concurrent and multi-timezone microservices using mainly Java, Spring Boot and Netflix OSS.}
-        \resumeItem{}{Handled several concurrency issues in our data-intensive applications that dropped the error rate to nearly 0\%.}
-        \resumeItem{}{Defined a new strategy to release multiple modules that performed 10 times faster than the previous one.}
-        \resumeItem{}{Designed and develop an end-to-end testing framework that dropped by almost 100\% the time needed to test a full new feature.}
-        \resumeItem{}{Massively increased the testing coverage of our microservices through unit, integration, contract and end-to-end testing.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-     {ORBCOM}{Porto, Portugal}
-     {Software Engineer}{November 2013 - April 2016}
-      \resumeItemListStart
-        \resumeItem{}{Responsible for the ASP.NET MVC and Umbraco development as well as mentoring interns on both technologies with several in-house hands-on.}
-        \resumeItem{}{Responsible for the development of e-commerce solutions using Umbraco and Merchello.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Unicer}{Porto, Portugal}
-      {Software Engineer}{January 2015 - December 2015}
-      \resumeItemListStart
-        \resumeItem{}{Responsible for building modules, mentoring team members, and releasing websites based on the Carlsberg Pegasus project: Super Bock, \'Agua das Pedras and Carslberg Where is the Party.}        
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
   
-\section{Activities}
-	\resumeItemListStart
-	    \resumeItem{}{Organized Hacktoberfest in Porto! 2017 Edition}
-	    \resumeItem{}{Speaker at Pixels Camp 2017 with a talk on Consumer-Driven Contracts}\resumeItem{}{Speaker at local meetups such as Porto Codes and Devops Porto}
-        \resumeItem{}{Attended at Sapo Codebits VI, VII and Devoxx Poland 2017}   
-      \resumeItemListEnd
+%\section{Activities}
+%  \resumeItemListStart
+%      \resumeItem{}{Organizer of \href{https://www.meetup.com/Papers-We-Love-Porto/}{Papers We Love @ Porto}}
+%      \resumeItem{}{I usually blog at at \href{http://ordepdev.me}{ordepdev.me} when I have something interesting to share}
+%      \resumeItem{}{Spoke at \href{https://www.youtube.com/watch?v=AEtXHTGEweg}{Lambda Days}, \href{https://www.youtube.com/watch?v=MWLcRZUo9Mc}{ScaleConf Colombia}, \href{https://www.youtube.com/watch?v=SMhA2sEMtYQ}{Tech in Porto} and \href{https://www.youtube.com/watch?v=czyUG2Tp-3s}{Pixels Camp} and local meetups}
+%      \resumeItem{}{Organized Hacktoberfest in Porto! 2017 \& 2018 Editions}      
+%      \resumeItemListEnd
 
 \end{document}
